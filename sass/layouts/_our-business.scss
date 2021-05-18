@@ -1,8 +1,8 @@
 .our-business {
+  padding-bottom: 94px;
+
   display: flex;
   justify-content: center;
-
-  padding-bottom: 94px;
 }
 
 .our-business__title {
@@ -17,12 +17,14 @@
 }
 
 .our-business__list {
-  display: flex;
-  justify-content: center;
-
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .our-business__item {

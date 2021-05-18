@@ -220,15 +220,22 @@ body {
 }
 
 .task__list {
-  display: flex;
-  justify-content: center;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.task__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .task__list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .task__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .task__title {
@@ -249,7 +256,6 @@ body {
 }
 
 .task__icon {
-  width: 270px;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -259,10 +265,28 @@ body {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 480px) {
+  .task__icon {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .task__icon {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .task__icon {
+    width: 270px;
+  }
+}
+
 .our-business {
+  padding-bottom: 94px;
   display: flex;
   justify-content: center;
-  padding-bottom: 94px;
 }
 
 .our-business__title {
@@ -276,11 +300,16 @@ body {
 }
 
 .our-business__list {
-  display: flex;
-  justify-content: center;
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .our-business__list {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .our-business__item {
@@ -317,15 +346,19 @@ body {
 }
 
 .team__list {
-  display: flex;
-  justify-content: center;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .team__list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .team__item {
-  margin-right: 30px;
   text-align: center;
   padding: 0;
   background-color: #ffffff;
@@ -333,18 +366,57 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
+@media screen and (min-width: 1200px) {
+  .team__item {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team__item {
+    margin-bottom: 30px;
+  }
+}
+
 .team__item:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .team__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .team__title--primary {
   margin-top: 0;
   margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 1.2;
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title--primary {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .team__title--primary {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__title--primary {
+    font-size: 28px;
+    line-height: 1.2;
+  }
 }
 
 .team__title {
