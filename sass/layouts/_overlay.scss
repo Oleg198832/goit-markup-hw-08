@@ -20,8 +20,24 @@
   margin-bottom: 30px;
 
   color: var(--primary-white-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
   text-transform: uppercase;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    font-size: 44px;
+    line-height: 1.4;
+    font-weight: 900;
+  }
 }
