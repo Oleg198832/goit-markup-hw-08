@@ -1,6 +1,16 @@
 .task {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .task__list {
@@ -11,6 +21,18 @@
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.task__item {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100%-2 * 30px) / 2);
+    width: 354px;
   }
 }
 

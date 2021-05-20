@@ -1,8 +1,12 @@
 .our-business {
+  display: none;
+
   padding-bottom: 94px;
 
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .our-business__title {
