@@ -140,18 +140,29 @@ body {
 }
 
 .site-nav {
-  display: flex;
-  align-items: center;
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .site-nav__list {
-  display: inline-flex;
+  display: none;
   padding: 0;
   margin: 0;
   list-style-type: none;
   margin-left: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav__list {
+    display: inline-flex;
+  }
 }
 
 .site-nav__item:not(:first-child) {
@@ -159,13 +170,19 @@ body {
 }
 
 .site-nav__link {
-  display: flex;
+  display: none;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav__link {
+    display: flex;
+  }
 }
 
 .site-nav__link:hover, .site-nav__link:focus {
@@ -412,10 +429,11 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 480px) and (max-width: 1199.98px) {
   .team__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-left: -30px;
   }
 }
@@ -427,6 +445,7 @@ body {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: 270px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -439,7 +458,7 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .team__item {
     margin-left: 30px;
-    flex-basis: calc((100% - 60px) / 2);
+    flex-basis: calc((100% - 120px) / 4);
   }
 }
 
@@ -548,11 +567,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: -30px;
   }
-}
-
-.client__item:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -566,17 +582,11 @@ body {
   justify-content: center;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767.98px) {
+@media screen and (min-width: 480px) and (max-width: 1199.98px) {
   .client__item {
-    margin-right: 30px;
-    flex-basis: calc((100% - 30px) / 3);
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .client__item {
-    margin-right: 30px;
-    flex-basis: calc((100% - 30px) / 4);
+    margin-bottom: 30px;
+    margin-left: 30px;
+    flex-basis: calc((100% - 180px) / 6);
   }
 }
 
